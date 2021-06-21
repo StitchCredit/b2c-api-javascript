@@ -14,18 +14,19 @@
 
 import ApiClient from "../ApiClient";
 import AlertRespDTO from '../model/AlertRespDTO';
-import CreditReport from '../model/CreditReport';
-import CreditScore from '../model/CreditScore';
+import CreditReportReport from '../model/CreditReportReport';
+import CreditScoreAbstractScore from '../model/CreditScoreAbstractScore';
+import CreditScoreHistoryScore from '../model/CreditScoreHistoryScore';
+import CreditScoreScore from '../model/CreditScoreScore';
 import DirectChangeEmailReqDTO from '../model/DirectChangeEmailReqDTO';
 import DirectChangeMobileReqDTO from '../model/DirectChangeMobileReqDTO';
 import DirectLoginReqDTO from '../model/DirectLoginReqDTO';
 import DirectUserRegReqDTO from '../model/DirectUserRegReqDTO';
 import EfxConfigRespDTO from '../model/EfxConfigRespDTO';
-import HistoricalScore from '../model/HistoricalScore';
-import LatestScore from '../model/LatestScore';
 import LoginRespDTO from '../model/LoginRespDTO';
 import PreauthTokenDTO from '../model/PreauthTokenDTO';
 import UserLoginRespDTO from '../model/UserLoginRespDTO';
+import UserRespDTO from '../model/UserRespDTO';
 
 /**
 * DirectController service.
@@ -308,14 +309,14 @@ export default class DirectControllerApi {
      * Callback function to receive the result of the efxLatestEFXScore operation.
      * @callback module:api/DirectControllerApi~efxLatestEFXScoreCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/LatestScore} data The data returned by the service call.
+     * @param {module:model/CreditScoreScore} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * @param {String} id 
      * @param {module:api/DirectControllerApi~efxLatestEFXScoreCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LatestScore}
+     * data is of type: {@link module:model/CreditScoreScore}
      */
     efxLatestEFXScore(id, callback) {
       let postBody = null;
@@ -337,7 +338,7 @@ export default class DirectControllerApi {
       let authNames = ['accessToken'];
       let contentTypes = [];
       let accepts = ['*/*'];
-      let returnType = LatestScore;
+      let returnType = CreditScoreScore;
       return this.apiClient.callApi(
         '/direct/efx-latest-efx-score/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -349,14 +350,14 @@ export default class DirectControllerApi {
      * Callback function to receive the result of the efxLatestReport operation.
      * @callback module:api/DirectControllerApi~efxLatestReportCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/CreditReport} data The data returned by the service call.
+     * @param {module:model/CreditReportReport} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * @param {String} id 
      * @param {module:api/DirectControllerApi~efxLatestReportCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CreditReport}
+     * data is of type: {@link module:model/CreditReportReport}
      */
     efxLatestReport(id, callback) {
       let postBody = null;
@@ -378,7 +379,7 @@ export default class DirectControllerApi {
       let authNames = ['accessToken'];
       let contentTypes = [];
       let accepts = ['*/*'];
-      let returnType = CreditReport;
+      let returnType = CreditReportReport;
       return this.apiClient.callApi(
         '/direct/efx-latest-report/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -390,14 +391,14 @@ export default class DirectControllerApi {
      * Callback function to receive the result of the efxLatestScores operation.
      * @callback module:api/DirectControllerApi~efxLatestScoresCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/LatestScore>} data The data returned by the service call.
+     * @param {module:model/CreditScoreScore} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * @param {String} id 
      * @param {module:api/DirectControllerApi~efxLatestScoresCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/LatestScore>}
+     * data is of type: {@link module:model/CreditScoreScore}
      */
     efxLatestScores(id, callback) {
       let postBody = null;
@@ -419,7 +420,7 @@ export default class DirectControllerApi {
       let authNames = ['accessToken'];
       let contentTypes = [];
       let accepts = ['*/*'];
-      let returnType = [LatestScore];
+      let returnType = CreditScoreScore;
       return this.apiClient.callApi(
         '/direct/efx-latest-scores/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -431,14 +432,14 @@ export default class DirectControllerApi {
      * Callback function to receive the result of the efxScoreHistory operation.
      * @callback module:api/DirectControllerApi~efxScoreHistoryCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/HistoricalScore>} data The data returned by the service call.
+     * @param {Array.<module:model/CreditScoreHistoryScore>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * @param {String} id 
      * @param {module:api/DirectControllerApi~efxScoreHistoryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/HistoricalScore>}
+     * data is of type: {@link Array.<module:model/CreditScoreHistoryScore>}
      */
     efxScoreHistory(id, callback) {
       let postBody = null;
@@ -460,7 +461,7 @@ export default class DirectControllerApi {
       let authNames = ['accessToken'];
       let contentTypes = [];
       let accepts = ['*/*'];
-      let returnType = [HistoricalScore];
+      let returnType = [CreditScoreHistoryScore];
       return this.apiClient.callApi(
         '/direct/efx-score-history/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -472,14 +473,14 @@ export default class DirectControllerApi {
      * Callback function to receive the result of the efxScores operation.
      * @callback module:api/DirectControllerApi~efxScoresCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CreditScore>} data The data returned by the service call.
+     * @param {Array.<module:model/CreditScoreAbstractScore>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
      * @param {String} id 
      * @param {module:api/DirectControllerApi~efxScoresCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CreditScore>}
+     * data is of type: {@link Array.<module:model/CreditScoreAbstractScore>}
      */
     efxScores(id, callback) {
       let postBody = null;
@@ -501,9 +502,50 @@ export default class DirectControllerApi {
       let authNames = ['accessToken'];
       let contentTypes = [];
       let accepts = ['*/*'];
-      let returnType = [CreditScore];
+      let returnType = [CreditScoreAbstractScore];
       return this.apiClient.callApi(
         '/direct/efx-scores/{id}', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getUser operation.
+     * @callback module:api/DirectControllerApi~getUserCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/UserRespDTO} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * @param {String} id 
+     * @param {module:api/DirectControllerApi~getUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/UserRespDTO}
+     */
+    getUser(id, callback) {
+      let postBody = null;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling getUser");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['accessToken'];
+      let contentTypes = [];
+      let accepts = ['*/*'];
+      let returnType = UserRespDTO;
+      return this.apiClient.callApi(
+        '/direct/user/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

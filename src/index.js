@@ -13,70 +13,56 @@
 
 
 import ApiClient from './ApiClient';
-import ActionTokenRespDTO from './model/ActionTokenRespDTO';
 import AlertRespDTO from './model/AlertRespDTO';
-import Answer from './model/Answer';
-import ApplicationContext from './model/ApplicationContext';
-import ApplicationContextClassLoader from './model/ApplicationContextClassLoader';
-import ApplicationContextClassLoaderParent from './model/ApplicationContextClassLoaderParent';
-import ApplicationContextClassLoaderParentUnnamedModule from './model/ApplicationContextClassLoaderParentUnnamedModule';
-import ApplicationContextClassLoaderParentUnnamedModuleClassLoader from './model/ApplicationContextClassLoaderParentUnnamedModuleClassLoader';
-import ApplicationContextClassLoaderParentUnnamedModuleClassLoaderDefinedPackages from './model/ApplicationContextClassLoaderParentUnnamedModuleClassLoaderDefinedPackages';
-import ApplicationContextClassLoaderParentUnnamedModuleDescriptor from './model/ApplicationContextClassLoaderParentUnnamedModuleDescriptor';
-import ChangeEmailReqDTO from './model/ChangeEmailReqDTO';
-import ChangePasswordReqDTO from './model/ChangePasswordReqDTO';
-import ChangeRecoveryReqDTO from './model/ChangeRecoveryReqDTO';
-import CloseAccountReqDTO from './model/CloseAccountReqDTO';
-import CodeDescription from './model/CodeDescription';
-import CollectionItem from './model/CollectionItem';
-import ConsumerStatement from './model/ConsumerStatement';
-import CreditReport from './model/CreditReport';
-import CreditReportAccount from './model/CreditReportAccount';
-import CreditReportProviderView from './model/CreditReportProviderView';
-import CreditScore from './model/CreditScore';
+import BankruptcyReport from './model/BankruptcyReport';
+import CodeDescriptionReport from './model/CodeDescriptionReport';
+import CollectionItemReport from './model/CollectionItemReport';
+import ConsumerStatementReport from './model/ConsumerStatementReport';
+import ContactInformationReport from './model/ContactInformationReport';
+import CountryReport from './model/CountryReport';
+import CreditReportAccountReport from './model/CreditReportAccountReport';
+import CreditReportProviderDisputeInformationReport from './model/CreditReportProviderDisputeInformationReport';
+import CreditReportProviderViewReport from './model/CreditReportProviderViewReport';
+import CreditReportReport from './model/CreditReportReport';
+import CreditReportSummaryAccountsReport from './model/CreditReportSummaryAccountsReport';
+import CreditReportSummaryReport from './model/CreditReportSummaryReport';
+import CreditScoreAbstractScore from './model/CreditScoreAbstractScore';
+import CreditScoreHistoryProviderViewScore from './model/CreditScoreHistoryProviderViewScore';
+import CreditScoreHistoryScore from './model/CreditScoreHistoryScore';
+import CreditScoreLoanRiskRangeReport from './model/CreditScoreLoanRiskRangeReport';
+import CreditScoreLoanRiskRangeScore from './model/CreditScoreLoanRiskRangeScore';
+import CreditScoreProviderViewScore from './model/CreditScoreProviderViewScore';
+import CreditScoreRangeReport from './model/CreditScoreRangeReport';
+import CreditScoreRangeScore from './model/CreditScoreRangeScore';
+import CreditScoreReasonReport from './model/CreditScoreReasonReport';
+import CreditScoreReasonScore from './model/CreditScoreReasonScore';
+import CreditScoreReport from './model/CreditScoreReport';
+import CreditScoreScore from './model/CreditScoreScore';
 import DirectChangeEmailReqDTO from './model/DirectChangeEmailReqDTO';
 import DirectChangeMobileReqDTO from './model/DirectChangeMobileReqDTO';
 import DirectLoginReqDTO from './model/DirectLoginReqDTO';
 import DirectUserRegReqDTO from './model/DirectUserRegReqDTO';
 import EfxConfigRespDTO from './model/EfxConfigRespDTO';
-import Environment from './model/Environment';
-import HistoricalScore from './model/HistoricalScore';
-import IdentityMobileRespDTO from './model/IdentityMobileRespDTO';
-import IdentityQuizDTO from './model/IdentityQuizDTO';
-import IdentityQuizReqDTO from './model/IdentityQuizReqDTO';
-import IdentityReqDTO from './model/IdentityReqDTO';
-import Inquiry from './model/Inquiry';
-import LatestScore from './model/LatestScore';
-import LoginReqDTO from './model/LoginReqDTO';
+import EmployerReport from './model/EmployerReport';
+import InquiryReport from './model/InquiryReport';
+import InternationalAddressReport from './model/InternationalAddressReport';
+import InternationalPhoneReport from './model/InternationalPhoneReport';
+import JudgmentReport from './model/JudgmentReport';
+import LienReport from './model/LienReport';
 import LoginRespDTO from './model/LoginRespDTO';
-import PasswordRecoveryReqDTO from './model/PasswordRecoveryReqDTO';
-import PasswordResetReqDTO from './model/PasswordResetReqDTO';
-import PaymentHistoryYear from './model/PaymentHistoryYear';
+import MoneyReport from './model/MoneyReport';
+import PaymentHistoryMonthReport from './model/PaymentHistoryMonthReport';
+import PaymentHistoryYearReport from './model/PaymentHistoryYearReport';
+import PersonNameReport from './model/PersonNameReport';
+import PersonSubjectReport from './model/PersonSubjectReport';
 import PreauthTokenDTO from './model/PreauthTokenDTO';
-import ProviderScore from './model/ProviderScore';
-import ProviderView from './model/ProviderView';
-import Question from './model/Question';
-import RedirectView from './model/RedirectView';
-import RedirectViewServletContext from './model/RedirectViewServletContext';
-import RedirectViewServletContextFilterRegistrations from './model/RedirectViewServletContextFilterRegistrations';
-import RedirectViewServletContextJspConfigDescriptor from './model/RedirectViewServletContextJspConfigDescriptor';
-import RedirectViewServletContextJspConfigDescriptorJspPropertyGroups from './model/RedirectViewServletContextJspConfigDescriptorJspPropertyGroups';
-import RedirectViewServletContextJspConfigDescriptorTaglibs from './model/RedirectViewServletContextJspConfigDescriptorTaglibs';
-import RedirectViewServletContextServletRegistrations from './model/RedirectViewServletContextServletRegistrations';
-import RedirectViewServletContextSessionCookieConfig from './model/RedirectViewServletContextSessionCookieConfig';
-import ScoreRange from './model/ScoreRange';
-import ScoreReason from './model/ScoreReason';
-import TokenReqDTO from './model/TokenReqDTO';
-import UserConfigDTO from './model/UserConfigDTO';
+import PublicRecordsReport from './model/PublicRecordsReport';
+import TrendedDataHistoryReport from './model/TrendedDataHistoryReport';
+import TrendedDataReport from './model/TrendedDataReport';
+import TrendedDataYearReport from './model/TrendedDataYearReport';
 import UserLoginRespDTO from './model/UserLoginRespDTO';
-import UserNotificationsPref from './model/UserNotificationsPref';
-import UserOtpReqDTO from './model/UserOtpReqDTO';
-import UserOtpRespDTO from './model/UserOtpRespDTO';
-import UserRegReqDTO from './model/UserRegReqDTO';
-import UserRenewOtpReqDTO from './model/UserRenewOtpReqDTO';
 import UserRespDTO from './model/UserRespDTO';
 import DirectControllerApi from './api/DirectControllerApi';
-import UserControllerApi from './api/UserControllerApi';
 
 
 /**
@@ -118,130 +104,154 @@ export {
     ApiClient,
 
     /**
-     * The ActionTokenRespDTO model constructor.
-     * @property {module:model/ActionTokenRespDTO}
-     */
-    ActionTokenRespDTO,
-
-    /**
      * The AlertRespDTO model constructor.
      * @property {module:model/AlertRespDTO}
      */
     AlertRespDTO,
 
     /**
-     * The Answer model constructor.
-     * @property {module:model/Answer}
+     * The BankruptcyReport model constructor.
+     * @property {module:model/BankruptcyReport}
      */
-    Answer,
+    BankruptcyReport,
 
     /**
-     * The ApplicationContext model constructor.
-     * @property {module:model/ApplicationContext}
+     * The CodeDescriptionReport model constructor.
+     * @property {module:model/CodeDescriptionReport}
      */
-    ApplicationContext,
+    CodeDescriptionReport,
 
     /**
-     * The ApplicationContextClassLoader model constructor.
-     * @property {module:model/ApplicationContextClassLoader}
+     * The CollectionItemReport model constructor.
+     * @property {module:model/CollectionItemReport}
      */
-    ApplicationContextClassLoader,
+    CollectionItemReport,
 
     /**
-     * The ApplicationContextClassLoaderParent model constructor.
-     * @property {module:model/ApplicationContextClassLoaderParent}
+     * The ConsumerStatementReport model constructor.
+     * @property {module:model/ConsumerStatementReport}
      */
-    ApplicationContextClassLoaderParent,
+    ConsumerStatementReport,
 
     /**
-     * The ApplicationContextClassLoaderParentUnnamedModule model constructor.
-     * @property {module:model/ApplicationContextClassLoaderParentUnnamedModule}
+     * The ContactInformationReport model constructor.
+     * @property {module:model/ContactInformationReport}
      */
-    ApplicationContextClassLoaderParentUnnamedModule,
+    ContactInformationReport,
 
     /**
-     * The ApplicationContextClassLoaderParentUnnamedModuleClassLoader model constructor.
-     * @property {module:model/ApplicationContextClassLoaderParentUnnamedModuleClassLoader}
+     * The CountryReport model constructor.
+     * @property {module:model/CountryReport}
      */
-    ApplicationContextClassLoaderParentUnnamedModuleClassLoader,
+    CountryReport,
 
     /**
-     * The ApplicationContextClassLoaderParentUnnamedModuleClassLoaderDefinedPackages model constructor.
-     * @property {module:model/ApplicationContextClassLoaderParentUnnamedModuleClassLoaderDefinedPackages}
+     * The CreditReportAccountReport model constructor.
+     * @property {module:model/CreditReportAccountReport}
      */
-    ApplicationContextClassLoaderParentUnnamedModuleClassLoaderDefinedPackages,
+    CreditReportAccountReport,
 
     /**
-     * The ApplicationContextClassLoaderParentUnnamedModuleDescriptor model constructor.
-     * @property {module:model/ApplicationContextClassLoaderParentUnnamedModuleDescriptor}
+     * The CreditReportProviderDisputeInformationReport model constructor.
+     * @property {module:model/CreditReportProviderDisputeInformationReport}
      */
-    ApplicationContextClassLoaderParentUnnamedModuleDescriptor,
+    CreditReportProviderDisputeInformationReport,
 
     /**
-     * The ChangeEmailReqDTO model constructor.
-     * @property {module:model/ChangeEmailReqDTO}
+     * The CreditReportProviderViewReport model constructor.
+     * @property {module:model/CreditReportProviderViewReport}
      */
-    ChangeEmailReqDTO,
+    CreditReportProviderViewReport,
 
     /**
-     * The ChangePasswordReqDTO model constructor.
-     * @property {module:model/ChangePasswordReqDTO}
+     * The CreditReportReport model constructor.
+     * @property {module:model/CreditReportReport}
      */
-    ChangePasswordReqDTO,
+    CreditReportReport,
 
     /**
-     * The ChangeRecoveryReqDTO model constructor.
-     * @property {module:model/ChangeRecoveryReqDTO}
+     * The CreditReportSummaryAccountsReport model constructor.
+     * @property {module:model/CreditReportSummaryAccountsReport}
      */
-    ChangeRecoveryReqDTO,
+    CreditReportSummaryAccountsReport,
 
     /**
-     * The CloseAccountReqDTO model constructor.
-     * @property {module:model/CloseAccountReqDTO}
+     * The CreditReportSummaryReport model constructor.
+     * @property {module:model/CreditReportSummaryReport}
      */
-    CloseAccountReqDTO,
+    CreditReportSummaryReport,
 
     /**
-     * The CodeDescription model constructor.
-     * @property {module:model/CodeDescription}
+     * The CreditScoreAbstractScore model constructor.
+     * @property {module:model/CreditScoreAbstractScore}
      */
-    CodeDescription,
+    CreditScoreAbstractScore,
 
     /**
-     * The CollectionItem model constructor.
-     * @property {module:model/CollectionItem}
+     * The CreditScoreHistoryProviderViewScore model constructor.
+     * @property {module:model/CreditScoreHistoryProviderViewScore}
      */
-    CollectionItem,
+    CreditScoreHistoryProviderViewScore,
 
     /**
-     * The ConsumerStatement model constructor.
-     * @property {module:model/ConsumerStatement}
+     * The CreditScoreHistoryScore model constructor.
+     * @property {module:model/CreditScoreHistoryScore}
      */
-    ConsumerStatement,
+    CreditScoreHistoryScore,
 
     /**
-     * The CreditReport model constructor.
-     * @property {module:model/CreditReport}
+     * The CreditScoreLoanRiskRangeReport model constructor.
+     * @property {module:model/CreditScoreLoanRiskRangeReport}
      */
-    CreditReport,
+    CreditScoreLoanRiskRangeReport,
 
     /**
-     * The CreditReportAccount model constructor.
-     * @property {module:model/CreditReportAccount}
+     * The CreditScoreLoanRiskRangeScore model constructor.
+     * @property {module:model/CreditScoreLoanRiskRangeScore}
      */
-    CreditReportAccount,
+    CreditScoreLoanRiskRangeScore,
 
     /**
-     * The CreditReportProviderView model constructor.
-     * @property {module:model/CreditReportProviderView}
+     * The CreditScoreProviderViewScore model constructor.
+     * @property {module:model/CreditScoreProviderViewScore}
      */
-    CreditReportProviderView,
+    CreditScoreProviderViewScore,
 
     /**
-     * The CreditScore model constructor.
-     * @property {module:model/CreditScore}
+     * The CreditScoreRangeReport model constructor.
+     * @property {module:model/CreditScoreRangeReport}
      */
-    CreditScore,
+    CreditScoreRangeReport,
+
+    /**
+     * The CreditScoreRangeScore model constructor.
+     * @property {module:model/CreditScoreRangeScore}
+     */
+    CreditScoreRangeScore,
+
+    /**
+     * The CreditScoreReasonReport model constructor.
+     * @property {module:model/CreditScoreReasonReport}
+     */
+    CreditScoreReasonReport,
+
+    /**
+     * The CreditScoreReasonScore model constructor.
+     * @property {module:model/CreditScoreReasonScore}
+     */
+    CreditScoreReasonScore,
+
+    /**
+     * The CreditScoreReport model constructor.
+     * @property {module:model/CreditScoreReport}
+     */
+    CreditScoreReport,
+
+    /**
+     * The CreditScoreScore model constructor.
+     * @property {module:model/CreditScoreScore}
+     */
+    CreditScoreScore,
 
     /**
      * The DirectChangeEmailReqDTO model constructor.
@@ -274,58 +284,40 @@ export {
     EfxConfigRespDTO,
 
     /**
-     * The Environment model constructor.
-     * @property {module:model/Environment}
+     * The EmployerReport model constructor.
+     * @property {module:model/EmployerReport}
      */
-    Environment,
+    EmployerReport,
 
     /**
-     * The HistoricalScore model constructor.
-     * @property {module:model/HistoricalScore}
+     * The InquiryReport model constructor.
+     * @property {module:model/InquiryReport}
      */
-    HistoricalScore,
+    InquiryReport,
 
     /**
-     * The IdentityMobileRespDTO model constructor.
-     * @property {module:model/IdentityMobileRespDTO}
+     * The InternationalAddressReport model constructor.
+     * @property {module:model/InternationalAddressReport}
      */
-    IdentityMobileRespDTO,
+    InternationalAddressReport,
 
     /**
-     * The IdentityQuizDTO model constructor.
-     * @property {module:model/IdentityQuizDTO}
+     * The InternationalPhoneReport model constructor.
+     * @property {module:model/InternationalPhoneReport}
      */
-    IdentityQuizDTO,
+    InternationalPhoneReport,
 
     /**
-     * The IdentityQuizReqDTO model constructor.
-     * @property {module:model/IdentityQuizReqDTO}
+     * The JudgmentReport model constructor.
+     * @property {module:model/JudgmentReport}
      */
-    IdentityQuizReqDTO,
+    JudgmentReport,
 
     /**
-     * The IdentityReqDTO model constructor.
-     * @property {module:model/IdentityReqDTO}
+     * The LienReport model constructor.
+     * @property {module:model/LienReport}
      */
-    IdentityReqDTO,
-
-    /**
-     * The Inquiry model constructor.
-     * @property {module:model/Inquiry}
-     */
-    Inquiry,
-
-    /**
-     * The LatestScore model constructor.
-     * @property {module:model/LatestScore}
-     */
-    LatestScore,
-
-    /**
-     * The LoginReqDTO model constructor.
-     * @property {module:model/LoginReqDTO}
-     */
-    LoginReqDTO,
+    LienReport,
 
     /**
      * The LoginRespDTO model constructor.
@@ -334,22 +326,34 @@ export {
     LoginRespDTO,
 
     /**
-     * The PasswordRecoveryReqDTO model constructor.
-     * @property {module:model/PasswordRecoveryReqDTO}
+     * The MoneyReport model constructor.
+     * @property {module:model/MoneyReport}
      */
-    PasswordRecoveryReqDTO,
+    MoneyReport,
 
     /**
-     * The PasswordResetReqDTO model constructor.
-     * @property {module:model/PasswordResetReqDTO}
+     * The PaymentHistoryMonthReport model constructor.
+     * @property {module:model/PaymentHistoryMonthReport}
      */
-    PasswordResetReqDTO,
+    PaymentHistoryMonthReport,
 
     /**
-     * The PaymentHistoryYear model constructor.
-     * @property {module:model/PaymentHistoryYear}
+     * The PaymentHistoryYearReport model constructor.
+     * @property {module:model/PaymentHistoryYearReport}
      */
-    PaymentHistoryYear,
+    PaymentHistoryYearReport,
+
+    /**
+     * The PersonNameReport model constructor.
+     * @property {module:model/PersonNameReport}
+     */
+    PersonNameReport,
+
+    /**
+     * The PersonSubjectReport model constructor.
+     * @property {module:model/PersonSubjectReport}
+     */
+    PersonSubjectReport,
 
     /**
      * The PreauthTokenDTO model constructor.
@@ -358,130 +362,34 @@ export {
     PreauthTokenDTO,
 
     /**
-     * The ProviderScore model constructor.
-     * @property {module:model/ProviderScore}
+     * The PublicRecordsReport model constructor.
+     * @property {module:model/PublicRecordsReport}
      */
-    ProviderScore,
+    PublicRecordsReport,
 
     /**
-     * The ProviderView model constructor.
-     * @property {module:model/ProviderView}
+     * The TrendedDataHistoryReport model constructor.
+     * @property {module:model/TrendedDataHistoryReport}
      */
-    ProviderView,
+    TrendedDataHistoryReport,
 
     /**
-     * The Question model constructor.
-     * @property {module:model/Question}
+     * The TrendedDataReport model constructor.
+     * @property {module:model/TrendedDataReport}
      */
-    Question,
+    TrendedDataReport,
 
     /**
-     * The RedirectView model constructor.
-     * @property {module:model/RedirectView}
+     * The TrendedDataYearReport model constructor.
+     * @property {module:model/TrendedDataYearReport}
      */
-    RedirectView,
-
-    /**
-     * The RedirectViewServletContext model constructor.
-     * @property {module:model/RedirectViewServletContext}
-     */
-    RedirectViewServletContext,
-
-    /**
-     * The RedirectViewServletContextFilterRegistrations model constructor.
-     * @property {module:model/RedirectViewServletContextFilterRegistrations}
-     */
-    RedirectViewServletContextFilterRegistrations,
-
-    /**
-     * The RedirectViewServletContextJspConfigDescriptor model constructor.
-     * @property {module:model/RedirectViewServletContextJspConfigDescriptor}
-     */
-    RedirectViewServletContextJspConfigDescriptor,
-
-    /**
-     * The RedirectViewServletContextJspConfigDescriptorJspPropertyGroups model constructor.
-     * @property {module:model/RedirectViewServletContextJspConfigDescriptorJspPropertyGroups}
-     */
-    RedirectViewServletContextJspConfigDescriptorJspPropertyGroups,
-
-    /**
-     * The RedirectViewServletContextJspConfigDescriptorTaglibs model constructor.
-     * @property {module:model/RedirectViewServletContextJspConfigDescriptorTaglibs}
-     */
-    RedirectViewServletContextJspConfigDescriptorTaglibs,
-
-    /**
-     * The RedirectViewServletContextServletRegistrations model constructor.
-     * @property {module:model/RedirectViewServletContextServletRegistrations}
-     */
-    RedirectViewServletContextServletRegistrations,
-
-    /**
-     * The RedirectViewServletContextSessionCookieConfig model constructor.
-     * @property {module:model/RedirectViewServletContextSessionCookieConfig}
-     */
-    RedirectViewServletContextSessionCookieConfig,
-
-    /**
-     * The ScoreRange model constructor.
-     * @property {module:model/ScoreRange}
-     */
-    ScoreRange,
-
-    /**
-     * The ScoreReason model constructor.
-     * @property {module:model/ScoreReason}
-     */
-    ScoreReason,
-
-    /**
-     * The TokenReqDTO model constructor.
-     * @property {module:model/TokenReqDTO}
-     */
-    TokenReqDTO,
-
-    /**
-     * The UserConfigDTO model constructor.
-     * @property {module:model/UserConfigDTO}
-     */
-    UserConfigDTO,
+    TrendedDataYearReport,
 
     /**
      * The UserLoginRespDTO model constructor.
      * @property {module:model/UserLoginRespDTO}
      */
     UserLoginRespDTO,
-
-    /**
-     * The UserNotificationsPref model constructor.
-     * @property {module:model/UserNotificationsPref}
-     */
-    UserNotificationsPref,
-
-    /**
-     * The UserOtpReqDTO model constructor.
-     * @property {module:model/UserOtpReqDTO}
-     */
-    UserOtpReqDTO,
-
-    /**
-     * The UserOtpRespDTO model constructor.
-     * @property {module:model/UserOtpRespDTO}
-     */
-    UserOtpRespDTO,
-
-    /**
-     * The UserRegReqDTO model constructor.
-     * @property {module:model/UserRegReqDTO}
-     */
-    UserRegReqDTO,
-
-    /**
-     * The UserRenewOtpReqDTO model constructor.
-     * @property {module:model/UserRenewOtpReqDTO}
-     */
-    UserRenewOtpReqDTO,
 
     /**
      * The UserRespDTO model constructor.
@@ -493,11 +401,5 @@ export {
     * The DirectControllerApi service constructor.
     * @property {module:api/DirectControllerApi}
     */
-    DirectControllerApi,
-
-    /**
-    * The UserControllerApi service constructor.
-    * @property {module:api/UserControllerApi}
-    */
-    UserControllerApi
+    DirectControllerApi
 };

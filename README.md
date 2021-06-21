@@ -136,6 +136,7 @@ Class | Method | HTTP request | Description
 *ScDirectApiJs.DirectControllerApi* | [**efxLatestScores**](docs/DirectControllerApi.md#efxLatestScores) | **GET** /direct/efx-latest-scores/{id} | 
 *ScDirectApiJs.DirectControllerApi* | [**efxScoreHistory**](docs/DirectControllerApi.md#efxScoreHistory) | **GET** /direct/efx-score-history/{id} | 
 *ScDirectApiJs.DirectControllerApi* | [**efxScores**](docs/DirectControllerApi.md#efxScores) | **GET** /direct/efx-scores/{id} | 
+*ScDirectApiJs.DirectControllerApi* | [**getUser**](docs/DirectControllerApi.md#getUser) | **GET** /direct/user/{id} | 
 *ScDirectApiJs.DirectControllerApi* | [**login**](docs/DirectControllerApi.md#login) | **POST** /direct/login | 
 *ScDirectApiJs.DirectControllerApi* | [**preauthToken**](docs/DirectControllerApi.md#preauthToken) | **GET** /direct/preauth-token/{id} | 
 *ScDirectApiJs.DirectControllerApi* | [**refreshToken**](docs/DirectControllerApi.md#refreshToken) | **GET** /direct/refresh-token | 
@@ -143,100 +144,58 @@ Class | Method | HTTP request | Description
 *ScDirectApiJs.DirectControllerApi* | [**registerOld**](docs/DirectControllerApi.md#registerOld) | **POST** /direct/register | 
 *ScDirectApiJs.DirectControllerApi* | [**updateRefresh**](docs/DirectControllerApi.md#updateRefresh) | **POST** /direct/update-refresh/{id} | 
 *ScDirectApiJs.DirectControllerApi* | [**userTokenOld**](docs/DirectControllerApi.md#userTokenOld) | **GET** /direct/user-token/{id} | 
-*ScDirectApiJs.UserControllerApi* | [**changeNotifications**](docs/UserControllerApi.md#changeNotifications) | **POST** /users/change-notifications | 
-*ScDirectApiJs.UserControllerApi* | [**changePassword**](docs/UserControllerApi.md#changePassword) | **POST** /users/change-password | 
-*ScDirectApiJs.UserControllerApi* | [**changeRecovery**](docs/UserControllerApi.md#changeRecovery) | **POST** /users/change-recovery | 
-*ScDirectApiJs.UserControllerApi* | [**changeUserEmail**](docs/UserControllerApi.md#changeUserEmail) | **POST** /users/change-email | 
-*ScDirectApiJs.UserControllerApi* | [**closeUserAccount**](docs/UserControllerApi.md#closeUserAccount) | **POST** /users/close-account | 
-*ScDirectApiJs.UserControllerApi* | [**exchangePreauthToken**](docs/UserControllerApi.md#exchangePreauthToken) | **GET** /users/preauth-token/{token} | 
-*ScDirectApiJs.UserControllerApi* | [**getActionToken**](docs/UserControllerApi.md#getActionToken) | **POST** /users/action-token | 
-*ScDirectApiJs.UserControllerApi* | [**getEfxConfig**](docs/UserControllerApi.md#getEfxConfig) | **GET** /users/efx-config | 
-*ScDirectApiJs.UserControllerApi* | [**getEfxLatestEFXScore**](docs/UserControllerApi.md#getEfxLatestEFXScore) | **GET** /users/efx-latest-efx-score | 
-*ScDirectApiJs.UserControllerApi* | [**getEfxLatestScores**](docs/UserControllerApi.md#getEfxLatestScores) | **GET** /users/efx-latest-scores | 
-*ScDirectApiJs.UserControllerApi* | [**getEfxScoreHistory**](docs/UserControllerApi.md#getEfxScoreHistory) | **GET** /users/efx-score-history | 
-*ScDirectApiJs.UserControllerApi* | [**getEfxScores**](docs/UserControllerApi.md#getEfxScores) | **GET** /users/efx-scores | 
-*ScDirectApiJs.UserControllerApi* | [**getIdentityQuiz**](docs/UserControllerApi.md#getIdentityQuiz) | **GET** /users/get-quiz | 
-*ScDirectApiJs.UserControllerApi* | [**getMobileAuthorization**](docs/UserControllerApi.md#getMobileAuthorization) | **GET** /users/get-mobile | 
-*ScDirectApiJs.UserControllerApi* | [**getUser**](docs/UserControllerApi.md#getUser) | **GET** /users | 
-*ScDirectApiJs.UserControllerApi* | [**initialize**](docs/UserControllerApi.md#initialize) | **GET** /users/initialize | 
-*ScDirectApiJs.UserControllerApi* | [**initializeWithKey**](docs/UserControllerApi.md#initializeWithKey) | **GET** /users/initialize/{key} | 
-*ScDirectApiJs.UserControllerApi* | [**loginUser**](docs/UserControllerApi.md#loginUser) | **POST** /users/login | 
-*ScDirectApiJs.UserControllerApi* | [**recoverPassword**](docs/UserControllerApi.md#recoverPassword) | **POST** /users/password-recovery | 
-*ScDirectApiJs.UserControllerApi* | [**recoveryQuestion**](docs/UserControllerApi.md#recoveryQuestion) | **POST** /users/recovery-token | 
-*ScDirectApiJs.UserControllerApi* | [**refreshUserToken**](docs/UserControllerApi.md#refreshUserToken) | **GET** /users/refresh-token | 
-*ScDirectApiJs.UserControllerApi* | [**registerUser**](docs/UserControllerApi.md#registerUser) | **POST** /users/register | 
-*ScDirectApiJs.UserControllerApi* | [**renewMobileCode**](docs/UserControllerApi.md#renewMobileCode) | **POST** /users/renew-code | 
-*ScDirectApiJs.UserControllerApi* | [**resetPassword**](docs/UserControllerApi.md#resetPassword) | **POST** /users/password-reset | 
-*ScDirectApiJs.UserControllerApi* | [**sendMobileCode**](docs/UserControllerApi.md#sendMobileCode) | **POST** /users/send-code/{token} | 
-*ScDirectApiJs.UserControllerApi* | [**setIdentity**](docs/UserControllerApi.md#setIdentity) | **POST** /users/identity | 
-*ScDirectApiJs.UserControllerApi* | [**startUserSession**](docs/UserControllerApi.md#startUserSession) | **GET** /users/start | 
-*ScDirectApiJs.UserControllerApi* | [**verifyIdentityQuiz**](docs/UserControllerApi.md#verifyIdentityQuiz) | **POST** /users/verify-quiz | 
-*ScDirectApiJs.UserControllerApi* | [**verifyMobileCode**](docs/UserControllerApi.md#verifyMobileCode) | **POST** /users/verify-code | 
 
 
 ## Documentation for Models
 
- - [ScDirectApiJs.ActionTokenRespDTO](docs/ActionTokenRespDTO.md)
  - [ScDirectApiJs.AlertRespDTO](docs/AlertRespDTO.md)
- - [ScDirectApiJs.Answer](docs/Answer.md)
- - [ScDirectApiJs.ApplicationContext](docs/ApplicationContext.md)
- - [ScDirectApiJs.ApplicationContextClassLoader](docs/ApplicationContextClassLoader.md)
- - [ScDirectApiJs.ApplicationContextClassLoaderParent](docs/ApplicationContextClassLoaderParent.md)
- - [ScDirectApiJs.ApplicationContextClassLoaderParentUnnamedModule](docs/ApplicationContextClassLoaderParentUnnamedModule.md)
- - [ScDirectApiJs.ApplicationContextClassLoaderParentUnnamedModuleClassLoader](docs/ApplicationContextClassLoaderParentUnnamedModuleClassLoader.md)
- - [ScDirectApiJs.ApplicationContextClassLoaderParentUnnamedModuleClassLoaderDefinedPackages](docs/ApplicationContextClassLoaderParentUnnamedModuleClassLoaderDefinedPackages.md)
- - [ScDirectApiJs.ApplicationContextClassLoaderParentUnnamedModuleDescriptor](docs/ApplicationContextClassLoaderParentUnnamedModuleDescriptor.md)
- - [ScDirectApiJs.ChangeEmailReqDTO](docs/ChangeEmailReqDTO.md)
- - [ScDirectApiJs.ChangePasswordReqDTO](docs/ChangePasswordReqDTO.md)
- - [ScDirectApiJs.ChangeRecoveryReqDTO](docs/ChangeRecoveryReqDTO.md)
- - [ScDirectApiJs.CloseAccountReqDTO](docs/CloseAccountReqDTO.md)
- - [ScDirectApiJs.CodeDescription](docs/CodeDescription.md)
- - [ScDirectApiJs.CollectionItem](docs/CollectionItem.md)
- - [ScDirectApiJs.ConsumerStatement](docs/ConsumerStatement.md)
- - [ScDirectApiJs.CreditReport](docs/CreditReport.md)
- - [ScDirectApiJs.CreditReportAccount](docs/CreditReportAccount.md)
- - [ScDirectApiJs.CreditReportProviderView](docs/CreditReportProviderView.md)
- - [ScDirectApiJs.CreditScore](docs/CreditScore.md)
+ - [ScDirectApiJs.BankruptcyReport](docs/BankruptcyReport.md)
+ - [ScDirectApiJs.CodeDescriptionReport](docs/CodeDescriptionReport.md)
+ - [ScDirectApiJs.CollectionItemReport](docs/CollectionItemReport.md)
+ - [ScDirectApiJs.ConsumerStatementReport](docs/ConsumerStatementReport.md)
+ - [ScDirectApiJs.ContactInformationReport](docs/ContactInformationReport.md)
+ - [ScDirectApiJs.CountryReport](docs/CountryReport.md)
+ - [ScDirectApiJs.CreditReportAccountReport](docs/CreditReportAccountReport.md)
+ - [ScDirectApiJs.CreditReportProviderDisputeInformationReport](docs/CreditReportProviderDisputeInformationReport.md)
+ - [ScDirectApiJs.CreditReportProviderViewReport](docs/CreditReportProviderViewReport.md)
+ - [ScDirectApiJs.CreditReportReport](docs/CreditReportReport.md)
+ - [ScDirectApiJs.CreditReportSummaryAccountsReport](docs/CreditReportSummaryAccountsReport.md)
+ - [ScDirectApiJs.CreditReportSummaryReport](docs/CreditReportSummaryReport.md)
+ - [ScDirectApiJs.CreditScoreAbstractScore](docs/CreditScoreAbstractScore.md)
+ - [ScDirectApiJs.CreditScoreHistoryProviderViewScore](docs/CreditScoreHistoryProviderViewScore.md)
+ - [ScDirectApiJs.CreditScoreHistoryScore](docs/CreditScoreHistoryScore.md)
+ - [ScDirectApiJs.CreditScoreLoanRiskRangeReport](docs/CreditScoreLoanRiskRangeReport.md)
+ - [ScDirectApiJs.CreditScoreLoanRiskRangeScore](docs/CreditScoreLoanRiskRangeScore.md)
+ - [ScDirectApiJs.CreditScoreProviderViewScore](docs/CreditScoreProviderViewScore.md)
+ - [ScDirectApiJs.CreditScoreRangeReport](docs/CreditScoreRangeReport.md)
+ - [ScDirectApiJs.CreditScoreRangeScore](docs/CreditScoreRangeScore.md)
+ - [ScDirectApiJs.CreditScoreReasonReport](docs/CreditScoreReasonReport.md)
+ - [ScDirectApiJs.CreditScoreReasonScore](docs/CreditScoreReasonScore.md)
+ - [ScDirectApiJs.CreditScoreReport](docs/CreditScoreReport.md)
+ - [ScDirectApiJs.CreditScoreScore](docs/CreditScoreScore.md)
  - [ScDirectApiJs.DirectChangeEmailReqDTO](docs/DirectChangeEmailReqDTO.md)
  - [ScDirectApiJs.DirectChangeMobileReqDTO](docs/DirectChangeMobileReqDTO.md)
  - [ScDirectApiJs.DirectLoginReqDTO](docs/DirectLoginReqDTO.md)
  - [ScDirectApiJs.DirectUserRegReqDTO](docs/DirectUserRegReqDTO.md)
  - [ScDirectApiJs.EfxConfigRespDTO](docs/EfxConfigRespDTO.md)
- - [ScDirectApiJs.Environment](docs/Environment.md)
- - [ScDirectApiJs.HistoricalScore](docs/HistoricalScore.md)
- - [ScDirectApiJs.IdentityMobileRespDTO](docs/IdentityMobileRespDTO.md)
- - [ScDirectApiJs.IdentityQuizDTO](docs/IdentityQuizDTO.md)
- - [ScDirectApiJs.IdentityQuizReqDTO](docs/IdentityQuizReqDTO.md)
- - [ScDirectApiJs.IdentityReqDTO](docs/IdentityReqDTO.md)
- - [ScDirectApiJs.Inquiry](docs/Inquiry.md)
- - [ScDirectApiJs.LatestScore](docs/LatestScore.md)
- - [ScDirectApiJs.LoginReqDTO](docs/LoginReqDTO.md)
+ - [ScDirectApiJs.EmployerReport](docs/EmployerReport.md)
+ - [ScDirectApiJs.InquiryReport](docs/InquiryReport.md)
+ - [ScDirectApiJs.InternationalAddressReport](docs/InternationalAddressReport.md)
+ - [ScDirectApiJs.InternationalPhoneReport](docs/InternationalPhoneReport.md)
+ - [ScDirectApiJs.JudgmentReport](docs/JudgmentReport.md)
+ - [ScDirectApiJs.LienReport](docs/LienReport.md)
  - [ScDirectApiJs.LoginRespDTO](docs/LoginRespDTO.md)
- - [ScDirectApiJs.PasswordRecoveryReqDTO](docs/PasswordRecoveryReqDTO.md)
- - [ScDirectApiJs.PasswordResetReqDTO](docs/PasswordResetReqDTO.md)
- - [ScDirectApiJs.PaymentHistoryYear](docs/PaymentHistoryYear.md)
+ - [ScDirectApiJs.MoneyReport](docs/MoneyReport.md)
+ - [ScDirectApiJs.PaymentHistoryMonthReport](docs/PaymentHistoryMonthReport.md)
+ - [ScDirectApiJs.PaymentHistoryYearReport](docs/PaymentHistoryYearReport.md)
+ - [ScDirectApiJs.PersonNameReport](docs/PersonNameReport.md)
+ - [ScDirectApiJs.PersonSubjectReport](docs/PersonSubjectReport.md)
  - [ScDirectApiJs.PreauthTokenDTO](docs/PreauthTokenDTO.md)
- - [ScDirectApiJs.ProviderScore](docs/ProviderScore.md)
- - [ScDirectApiJs.ProviderView](docs/ProviderView.md)
- - [ScDirectApiJs.Question](docs/Question.md)
- - [ScDirectApiJs.RedirectView](docs/RedirectView.md)
- - [ScDirectApiJs.RedirectViewServletContext](docs/RedirectViewServletContext.md)
- - [ScDirectApiJs.RedirectViewServletContextFilterRegistrations](docs/RedirectViewServletContextFilterRegistrations.md)
- - [ScDirectApiJs.RedirectViewServletContextJspConfigDescriptor](docs/RedirectViewServletContextJspConfigDescriptor.md)
- - [ScDirectApiJs.RedirectViewServletContextJspConfigDescriptorJspPropertyGroups](docs/RedirectViewServletContextJspConfigDescriptorJspPropertyGroups.md)
- - [ScDirectApiJs.RedirectViewServletContextJspConfigDescriptorTaglibs](docs/RedirectViewServletContextJspConfigDescriptorTaglibs.md)
- - [ScDirectApiJs.RedirectViewServletContextServletRegistrations](docs/RedirectViewServletContextServletRegistrations.md)
- - [ScDirectApiJs.RedirectViewServletContextSessionCookieConfig](docs/RedirectViewServletContextSessionCookieConfig.md)
- - [ScDirectApiJs.ScoreRange](docs/ScoreRange.md)
- - [ScDirectApiJs.ScoreReason](docs/ScoreReason.md)
- - [ScDirectApiJs.TokenReqDTO](docs/TokenReqDTO.md)
- - [ScDirectApiJs.UserConfigDTO](docs/UserConfigDTO.md)
+ - [ScDirectApiJs.PublicRecordsReport](docs/PublicRecordsReport.md)
+ - [ScDirectApiJs.TrendedDataHistoryReport](docs/TrendedDataHistoryReport.md)
+ - [ScDirectApiJs.TrendedDataReport](docs/TrendedDataReport.md)
+ - [ScDirectApiJs.TrendedDataYearReport](docs/TrendedDataYearReport.md)
  - [ScDirectApiJs.UserLoginRespDTO](docs/UserLoginRespDTO.md)
- - [ScDirectApiJs.UserNotificationsPref](docs/UserNotificationsPref.md)
- - [ScDirectApiJs.UserOtpReqDTO](docs/UserOtpReqDTO.md)
- - [ScDirectApiJs.UserOtpRespDTO](docs/UserOtpRespDTO.md)
- - [ScDirectApiJs.UserRegReqDTO](docs/UserRegReqDTO.md)
- - [ScDirectApiJs.UserRenewOtpReqDTO](docs/UserRenewOtpReqDTO.md)
  - [ScDirectApiJs.UserRespDTO](docs/UserRespDTO.md)
 
 
