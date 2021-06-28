@@ -17,7 +17,7 @@ import CreditScoreHistoryProviderViewScore from './CreditScoreHistoryProviderVie
 /**
  * The CreditScoreHistoryScore model module.
  * @module model/CreditScoreHistoryScore
- * @version 1.0.0
+ * @version 1.0.1
  */
 class CreditScoreHistoryScore {
     /**

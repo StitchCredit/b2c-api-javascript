@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DirectUserRegReqDTO model module.
  * @module model/DirectUserRegReqDTO
- * @version 1.0.0
+ * @version 1.0.1
  */
 class DirectUserRegReqDTO {
     /**

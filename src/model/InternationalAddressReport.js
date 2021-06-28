@@ -18,7 +18,7 @@ import InternationalPhoneReport from './InternationalPhoneReport';
 /**
  * The InternationalAddressReport model module.
  * @module model/InternationalAddressReport
- * @version 1.0.0
+ * @version 1.0.1
  */
 class InternationalAddressReport {
     /**

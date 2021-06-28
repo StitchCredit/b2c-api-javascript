@@ -44,13 +44,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
 let DirectChangeEmailReqDTO = new EcreditDirectApi.DirectChangeEmailReqDTO(); // DirectChangeEmailReqDTO | 
-apiInstance.changeEmail(id, DirectChangeEmailReqDTO, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.changeEmail(id, DirectChangeEmailReqDTO).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -93,13 +92,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
 let host = "host_example"; // String | 
-apiInstance.changeHost(id, host, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.changeHost(id, host).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -142,13 +140,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
 let DirectChangeMobileReqDTO = new EcreditDirectApi.DirectChangeMobileReqDTO(); // DirectChangeMobileReqDTO | 
-apiInstance.changeMobile(id, DirectChangeMobileReqDTO, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.changeMobile(id, DirectChangeMobileReqDTO).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -190,13 +187,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
-apiInstance.closeAccount(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.closeAccount(id).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -237,13 +233,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
-apiInstance.efxAlert(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.efxAlert(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -284,13 +279,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
-apiInstance.efxConfig(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.efxConfig(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -331,13 +325,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
-apiInstance.efxLatestEFXScore(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.efxLatestEFXScore(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -378,13 +371,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
-apiInstance.efxLatestReport(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.efxLatestReport(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -425,13 +417,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
-apiInstance.efxLatestScores(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.efxLatestScores(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -472,13 +463,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
-apiInstance.efxScoreHistory(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.efxScoreHistory(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -519,13 +509,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
-apiInstance.efxScores(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.efxScores(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -566,13 +555,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
-apiInstance.getUser(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUser(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -609,13 +597,12 @@ import EcreditDirectApi from 'ecredit-direct-api';
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let DirectLoginReqDTO = new EcreditDirectApi.DirectLoginReqDTO(); // DirectLoginReqDTO | 
-apiInstance.login(DirectLoginReqDTO, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.login(DirectLoginReqDTO).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -656,13 +643,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
-apiInstance.preauthToken(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.preauthToken(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -701,13 +687,12 @@ let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let opts = {
   'token': "token_example" // String | 
 };
-apiInstance.refreshToken(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.refreshToken(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -748,13 +733,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let DirectUserRegReqDTO = new EcreditDirectApi.DirectUserRegReqDTO(); // DirectUserRegReqDTO | 
-apiInstance.register(DirectUserRegReqDTO, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.register(DirectUserRegReqDTO).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -795,13 +779,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let DirectUserRegReqDTO = new EcreditDirectApi.DirectUserRegReqDTO(); // DirectUserRegReqDTO | 
-apiInstance.registerOld(DirectUserRegReqDTO, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.registerOld(DirectUserRegReqDTO).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -843,13 +826,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | 
 let rmonly = true; // Boolean | 
-apiInstance.updateRefresh(id, rmonly, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.updateRefresh(id, rmonly).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -891,13 +873,12 @@ accessToken.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new EcreditDirectApi.DirectControllerApi();
 let id = null; // String | UserId to generate preauth token for
-apiInstance.userTokenOld(id, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.userTokenOld(id).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

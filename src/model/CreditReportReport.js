@@ -17,7 +17,7 @@ import CreditReportProviderViewReport from './CreditReportProviderViewReport';
 /**
  * The CreditReportReport model module.
  * @module model/CreditReportReport
- * @version 1.0.0
+ * @version 1.0.1
  */
 class CreditReportReport {
     /**

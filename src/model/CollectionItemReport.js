@@ -17,7 +17,7 @@ import MoneyReport from './MoneyReport';
 /**
  * The CollectionItemReport model module.
  * @module model/CollectionItemReport
- * @version 1.0.0
+ * @version 1.0.1
  */
 class CollectionItemReport {
     /**

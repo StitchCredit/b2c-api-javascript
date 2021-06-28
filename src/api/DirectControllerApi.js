@@ -31,7 +31,7 @@ import UserRespDTO from '../model/UserRespDTO';
 /**
 * DirectController service.
 * @module api/DirectControllerApi
-* @version 1.0.0
+* @version 1.0.1
 */
 export default class DirectControllerApi {
 
@@ -47,20 +47,13 @@ export default class DirectControllerApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the changeEmail operation.
-     * @callback module:api/DirectControllerApi~changeEmailCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * @param {String} id 
      * @param {module:model/DirectChangeEmailReqDTO} DirectChangeEmailReqDTO 
-     * @param {module:api/DirectControllerApi~changeEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    changeEmail(id, DirectChangeEmailReqDTO, callback) {
+    changeEmailWithHttpInfo(id, DirectChangeEmailReqDTO) {
       let postBody = DirectChangeEmailReqDTO;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -88,24 +81,29 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/change-email/{id}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the changeHost operation.
-     * @callback module:api/DirectControllerApi~changeHostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @param {module:model/DirectChangeEmailReqDTO} DirectChangeEmailReqDTO 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    changeEmail(id, DirectChangeEmailReqDTO) {
+      return this.changeEmailWithHttpInfo(id, DirectChangeEmailReqDTO)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
      * @param {String} host 
-     * @param {module:api/DirectControllerApi~changeHostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    changeHost(id, host, callback) {
+    changeHostWithHttpInfo(id, host) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -134,24 +132,29 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/change-host/{id}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the changeMobile operation.
-     * @callback module:api/DirectControllerApi~changeMobileCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @param {String} host 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    changeHost(id, host) {
+      return this.changeHostWithHttpInfo(id, host)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
      * @param {module:model/DirectChangeMobileReqDTO} DirectChangeMobileReqDTO 
-     * @param {module:api/DirectControllerApi~changeMobileCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    changeMobile(id, DirectChangeMobileReqDTO, callback) {
+    changeMobileWithHttpInfo(id, DirectChangeMobileReqDTO) {
       let postBody = DirectChangeMobileReqDTO;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -179,23 +182,28 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/change-mobile/{id}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the closeAccount operation.
-     * @callback module:api/DirectControllerApi~closeAccountCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @param {module:model/DirectChangeMobileReqDTO} DirectChangeMobileReqDTO 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    changeMobile(id, DirectChangeMobileReqDTO) {
+      return this.changeMobileWithHttpInfo(id, DirectChangeMobileReqDTO)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
-     * @param {module:api/DirectControllerApi~closeAccountCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    closeAccount(id, callback) {
+    closeAccountWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -219,24 +227,27 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/close-account/{id}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the efxAlert operation.
-     * @callback module:api/DirectControllerApi~efxAlertCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AlertRespDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    closeAccount(id) {
+      return this.closeAccountWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
-     * @param {module:api/DirectControllerApi~efxAlertCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AlertRespDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AlertRespDTO} and HTTP response
      */
-    efxAlert(id, callback) {
+    efxAlertWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -260,24 +271,27 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/efx-alert/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the efxConfig operation.
-     * @callback module:api/DirectControllerApi~efxConfigCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/EfxConfigRespDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AlertRespDTO}
      */
+    efxAlert(id) {
+      return this.efxAlertWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
-     * @param {module:api/DirectControllerApi~efxConfigCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/EfxConfigRespDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/EfxConfigRespDTO} and HTTP response
      */
-    efxConfig(id, callback) {
+    efxConfigWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -301,24 +315,27 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/efx-config/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the efxLatestEFXScore operation.
-     * @callback module:api/DirectControllerApi~efxLatestEFXScoreCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CreditScoreScore} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/EfxConfigRespDTO}
      */
+    efxConfig(id) {
+      return this.efxConfigWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
-     * @param {module:api/DirectControllerApi~efxLatestEFXScoreCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CreditScoreScore}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreditScoreScore} and HTTP response
      */
-    efxLatestEFXScore(id, callback) {
+    efxLatestEFXScoreWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -342,24 +359,27 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/efx-latest-efx-score/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the efxLatestReport operation.
-     * @callback module:api/DirectControllerApi~efxLatestReportCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CreditReportReport} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreditScoreScore}
      */
+    efxLatestEFXScore(id) {
+      return this.efxLatestEFXScoreWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
-     * @param {module:api/DirectControllerApi~efxLatestReportCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CreditReportReport}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreditReportReport} and HTTP response
      */
-    efxLatestReport(id, callback) {
+    efxLatestReportWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -383,24 +403,27 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/efx-latest-report/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the efxLatestScores operation.
-     * @callback module:api/DirectControllerApi~efxLatestScoresCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CreditScoreScore} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreditReportReport}
      */
+    efxLatestReport(id) {
+      return this.efxLatestReportWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
-     * @param {module:api/DirectControllerApi~efxLatestScoresCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CreditScoreScore}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CreditScoreScore} and HTTP response
      */
-    efxLatestScores(id, callback) {
+    efxLatestScoresWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -424,24 +447,27 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/efx-latest-scores/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the efxScoreHistory operation.
-     * @callback module:api/DirectControllerApi~efxScoreHistoryCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CreditScoreHistoryScore>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CreditScoreScore}
      */
+    efxLatestScores(id) {
+      return this.efxLatestScoresWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
-     * @param {module:api/DirectControllerApi~efxScoreHistoryCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CreditScoreHistoryScore>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CreditScoreHistoryScore>} and HTTP response
      */
-    efxScoreHistory(id, callback) {
+    efxScoreHistoryWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -465,24 +491,27 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/efx-score-history/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the efxScores operation.
-     * @callback module:api/DirectControllerApi~efxScoresCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CreditScoreAbstractScore>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CreditScoreHistoryScore>}
      */
+    efxScoreHistory(id) {
+      return this.efxScoreHistoryWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
-     * @param {module:api/DirectControllerApi~efxScoresCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CreditScoreAbstractScore>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CreditScoreAbstractScore>} and HTTP response
      */
-    efxScores(id, callback) {
+    efxScoresWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -506,24 +535,27 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/efx-scores/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the getUser operation.
-     * @callback module:api/DirectControllerApi~getUserCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/UserRespDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CreditScoreAbstractScore>}
      */
+    efxScores(id) {
+      return this.efxScoresWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
-     * @param {module:api/DirectControllerApi~getUserCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UserRespDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserRespDTO} and HTTP response
      */
-    getUser(id, callback) {
+    getUserWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -547,24 +579,27 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/user/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the login operation.
-     * @callback module:api/DirectControllerApi~loginCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LoginRespDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserRespDTO}
      */
+    getUser(id) {
+      return this.getUserWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {module:model/DirectLoginReqDTO} DirectLoginReqDTO 
-     * @param {module:api/DirectControllerApi~loginCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LoginRespDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LoginRespDTO} and HTTP response
      */
-    login(DirectLoginReqDTO, callback) {
+    loginWithHttpInfo(DirectLoginReqDTO) {
       let postBody = DirectLoginReqDTO;
       // verify the required parameter 'DirectLoginReqDTO' is set
       if (DirectLoginReqDTO === undefined || DirectLoginReqDTO === null) {
@@ -587,24 +622,27 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/login', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the preauthToken operation.
-     * @callback module:api/DirectControllerApi~preauthTokenCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PreauthTokenDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {module:model/DirectLoginReqDTO} DirectLoginReqDTO 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LoginRespDTO}
      */
+    login(DirectLoginReqDTO) {
+      return this.loginWithHttpInfo(DirectLoginReqDTO)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
-     * @param {module:api/DirectControllerApi~preauthTokenCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/PreauthTokenDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PreauthTokenDTO} and HTTP response
      */
-    preauthToken(id, callback) {
+    preauthTokenWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -628,25 +666,28 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/preauth-token/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the refreshToken operation.
-     * @callback module:api/DirectControllerApi~refreshTokenCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LoginRespDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PreauthTokenDTO}
      */
+    preauthToken(id) {
+      return this.preauthTokenWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {Object} opts Optional parameters
      * @param {String} opts.token 
-     * @param {module:api/DirectControllerApi~refreshTokenCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LoginRespDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LoginRespDTO} and HTTP response
      */
-    refreshToken(opts, callback) {
+    refreshTokenWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -667,24 +708,28 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/refresh-token', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the register operation.
-     * @callback module:api/DirectControllerApi~registerCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/PreauthTokenDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.token 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LoginRespDTO}
      */
+    refreshToken(opts) {
+      return this.refreshTokenWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {module:model/DirectUserRegReqDTO} DirectUserRegReqDTO 
-     * @param {module:api/DirectControllerApi~registerCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/PreauthTokenDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/PreauthTokenDTO} and HTTP response
      */
-    register(DirectUserRegReqDTO, callback) {
+    registerWithHttpInfo(DirectUserRegReqDTO) {
       let postBody = DirectUserRegReqDTO;
       // verify the required parameter 'DirectUserRegReqDTO' is set
       if (DirectUserRegReqDTO === undefined || DirectUserRegReqDTO === null) {
@@ -707,24 +752,27 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/user-reg', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the registerOld operation.
-     * @callback module:api/DirectControllerApi~registerOldCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/UserLoginRespDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {module:model/DirectUserRegReqDTO} DirectUserRegReqDTO 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/PreauthTokenDTO}
      */
+    register(DirectUserRegReqDTO) {
+      return this.registerWithHttpInfo(DirectUserRegReqDTO)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {module:model/DirectUserRegReqDTO} DirectUserRegReqDTO 
-     * @param {module:api/DirectControllerApi~registerOldCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UserLoginRespDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserLoginRespDTO} and HTTP response
      */
-    registerOld(DirectUserRegReqDTO, callback) {
+    registerOldWithHttpInfo(DirectUserRegReqDTO) {
       let postBody = DirectUserRegReqDTO;
       // verify the required parameter 'DirectUserRegReqDTO' is set
       if (DirectUserRegReqDTO === undefined || DirectUserRegReqDTO === null) {
@@ -747,24 +795,28 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/register', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the updateRefresh operation.
-     * @callback module:api/DirectControllerApi~updateRefreshCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * @param {module:model/DirectUserRegReqDTO} DirectUserRegReqDTO 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserLoginRespDTO}
      */
+    registerOld(DirectUserRegReqDTO) {
+      return this.registerOldWithHttpInfo(DirectUserRegReqDTO)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id 
      * @param {Boolean} rmonly 
-     * @param {module:api/DirectControllerApi~updateRefreshCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    updateRefresh(id, rmonly, callback) {
+    updateRefreshWithHttpInfo(id, rmonly) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -793,24 +845,28 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/update-refresh/{id}', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the userTokenOld operation.
-     * @callback module:api/DirectControllerApi~userTokenOldCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/UserLoginRespDTO} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * @param {String} id 
+     * @param {Boolean} rmonly 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    updateRefresh(id, rmonly) {
+      return this.updateRefreshWithHttpInfo(id, rmonly)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * @param {String} id UserId to generate preauth token for
-     * @param {module:api/DirectControllerApi~userTokenOldCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/UserLoginRespDTO}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/UserLoginRespDTO} and HTTP response
      */
-    userTokenOld(id, callback) {
+    userTokenOldWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -834,8 +890,19 @@ export default class DirectControllerApi {
       return this.apiClient.callApi(
         '/direct/user-token/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * @param {String} id UserId to generate preauth token for
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/UserLoginRespDTO}
+     */
+    userTokenOld(id) {
+      return this.userTokenOldWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 
