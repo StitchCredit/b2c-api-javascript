@@ -71,9 +71,9 @@ import DirectControllerApi from './api/DirectControllerApi';
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var ScDirectApiJs = require('index'); // See note below*.
-* var xxxSvc = new ScDirectApiJs.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new ScDirectApiJs.Yyy(); // Construct a model instance.
+* var EcreditDirectApi = require('index'); // See note below*.
+* var xxxSvc = new EcreditDirectApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new EcreditDirectApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -85,8 +85,8 @@ import DirectControllerApi from './api/DirectControllerApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new ScDirectApiJs.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new ScDirectApiJs.Yyy(); // Construct a model instance.
+* var xxxSvc = new EcreditDirectApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new EcreditDirectApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
