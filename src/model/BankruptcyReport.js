@@ -18,7 +18,7 @@ import MoneyReport from './MoneyReport';
 /**
  * The BankruptcyReport model module.
  * @module model/BankruptcyReport
- * @version 1.0.0
+ * @version 1.0.3
  */
 class BankruptcyReport {
     /**

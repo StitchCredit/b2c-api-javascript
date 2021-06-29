@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PaymentHistoryMonthReport model module.
  * @module model/PaymentHistoryMonthReport
- * @version 1.0.0
+ * @version 1.0.3
  */
 class PaymentHistoryMonthReport {
     /**

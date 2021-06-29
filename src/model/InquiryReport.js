@@ -18,7 +18,7 @@ import ContactInformationReport from './ContactInformationReport';
 /**
  * The InquiryReport model module.
  * @module model/InquiryReport
- * @version 1.0.0
+ * @version 1.0.3
  */
 class InquiryReport {
     /**

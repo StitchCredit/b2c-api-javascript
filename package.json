@@ -1,6 +1,6 @@
 {
   "name": "ecredit-direct-api",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "StitchCredit_API",
   "license": "Unlicense",
   "main": "dist/index.js",
@@ -8,6 +8,10 @@
     "build": "babel src -d dist",
     "prepack": "npm install && npm run build",
     "test": "mocha --require @babel/register --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:StitchCredit/b2c-api-javascript.git"
   },
   "browser": {
     "fs": false

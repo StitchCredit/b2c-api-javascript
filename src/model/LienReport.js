@@ -17,7 +17,7 @@ import MoneyReport from './MoneyReport';
 /**
  * The LienReport model module.
  * @module model/LienReport
- * @version 1.0.0
+ * @version 1.0.3
  */
 class LienReport {
     /**

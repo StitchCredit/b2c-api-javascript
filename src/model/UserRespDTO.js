@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UserRespDTO model module.
  * @module model/UserRespDTO
- * @version 1.0.0
+ * @version 1.0.3
  */
 class UserRespDTO {
     /**

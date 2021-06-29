@@ -21,7 +21,7 @@ import TrendedDataHistoryReport from './TrendedDataHistoryReport';
 /**
  * The CreditReportAccountReport model module.
  * @module model/CreditReportAccountReport
- * @version 1.0.0
+ * @version 1.0.3
  */
 class CreditReportAccountReport {
     /**

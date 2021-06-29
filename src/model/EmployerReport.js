@@ -17,7 +17,7 @@ import InternationalAddressReport from './InternationalAddressReport';
 /**
  * The EmployerReport model module.
  * @module model/EmployerReport
- * @version 1.0.0
+ * @version 1.0.3
  */
 class EmployerReport {
     /**
