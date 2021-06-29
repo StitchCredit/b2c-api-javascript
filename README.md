@@ -119,7 +119,7 @@ api.changeEmail(id, DirectChangeEmailReqDTO).then(function() {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost:8081/api*
+All URIs are relative to *https://efx-dev.stitchcredit.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

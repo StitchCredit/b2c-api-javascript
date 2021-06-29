@@ -1,6 +1,6 @@
 # EcreditDirectApi.DirectControllerApi
 
-All URIs are relative to *http://localhost:8081/api*
+All URIs are relative to *https://efx-dev.stitchcredit.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

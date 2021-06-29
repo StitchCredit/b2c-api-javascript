@@ -32,9 +32,9 @@ class ApiClient {
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
-         * @default http://localhost:8081/api
+         * @default https://efx-dev.stitchcredit.com/api
          */
-        this.basePath = 'http://localhost:8081/api'.replace(/\/+$/, '');
+        this.basePath = 'https://efx-dev.stitchcredit.com/api'.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.
@@ -589,8 +589,8 @@ class ApiClient {
     hostSettings() {
         return [
             {
-              'url': "http://localhost:8081/api",
-              'description': "local testing URL",
+              'url': "https://efx-dev.stitchcredit.com/api",
+              'description': "Development Server URL",
             }
       ];
     }
