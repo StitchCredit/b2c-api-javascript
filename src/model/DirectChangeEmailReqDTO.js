@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DirectChangeEmailReqDTO model module.
  * @module model/DirectChangeEmailReqDTO
- * @version 1.0.1
+ * @version 1.0.0
  */
 class DirectChangeEmailReqDTO {
     /**

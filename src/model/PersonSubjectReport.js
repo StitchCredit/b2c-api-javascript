@@ -20,7 +20,7 @@ import PersonNameReport from './PersonNameReport';
 /**
  * The PersonSubjectReport model module.
  * @module model/PersonSubjectReport
- * @version 1.0.1
+ * @version 1.0.0
  */
 class PersonSubjectReport {
     /**

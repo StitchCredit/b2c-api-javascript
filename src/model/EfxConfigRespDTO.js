@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EfxConfigRespDTO model module.
  * @module model/EfxConfigRespDTO
- * @version 1.0.1
+ * @version 1.0.0
  */
 class EfxConfigRespDTO {
     /**

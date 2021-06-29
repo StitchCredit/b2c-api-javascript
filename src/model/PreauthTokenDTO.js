@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PreauthTokenDTO model module.
  * @module model/PreauthTokenDTO
- * @version 1.0.1
+ * @version 1.0.0
  */
 class PreauthTokenDTO {
     /**

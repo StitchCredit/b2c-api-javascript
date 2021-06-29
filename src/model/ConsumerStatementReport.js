@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConsumerStatementReport model module.
  * @module model/ConsumerStatementReport
- * @version 1.0.1
+ * @version 1.0.0
  */
 class ConsumerStatementReport {
     /**

@@ -18,7 +18,7 @@ import MoneyReport from './MoneyReport';
 /**
  * The JudgmentReport model module.
  * @module model/JudgmentReport
- * @version 1.0.1
+ * @version 1.0.0
  */
 class JudgmentReport {
     /**

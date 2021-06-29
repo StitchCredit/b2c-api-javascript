@@ -19,7 +19,7 @@ import CreditScoreReasonScore from './CreditScoreReasonScore';
 /**
  * The CreditScoreProviderViewScore model module.
  * @module model/CreditScoreProviderViewScore
- * @version 1.0.1
+ * @version 1.0.0
  */
 class CreditScoreProviderViewScore {
     /**

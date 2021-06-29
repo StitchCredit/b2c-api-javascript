@@ -17,7 +17,7 @@ import CreditScoreProviderViewScore from './CreditScoreProviderViewScore';
 /**
  * The CreditScoreScore model module.
  * @module model/CreditScoreScore
- * @version 1.0.1
+ * @version 1.0.0
  */
 class CreditScoreScore {
     /**

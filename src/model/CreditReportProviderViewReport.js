@@ -22,7 +22,7 @@ import PublicRecordsReport from './PublicRecordsReport';
 /**
  * The CreditReportProviderViewReport model module.
  * @module model/CreditReportProviderViewReport
- * @version 1.0.1
+ * @version 1.0.0
  */
 class CreditReportProviderViewReport {
     /**

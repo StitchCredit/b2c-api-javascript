@@ -19,7 +19,7 @@ import CreditScoreReasonReport from './CreditScoreReasonReport';
 /**
  * The CreditScoreReport model module.
  * @module model/CreditScoreReport
- * @version 1.0.1
+ * @version 1.0.0
  */
 class CreditScoreReport {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreditScoreLoanRiskRangeReport model module.
  * @module model/CreditScoreLoanRiskRangeReport
- * @version 1.0.1
+ * @version 1.0.0
  */
 class CreditScoreLoanRiskRangeReport {
     /**

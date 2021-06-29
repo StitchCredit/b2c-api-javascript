@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CodeDescriptionReport model module.
  * @module model/CodeDescriptionReport
- * @version 1.0.1
+ * @version 1.0.0
  */
 class CodeDescriptionReport {
     /**

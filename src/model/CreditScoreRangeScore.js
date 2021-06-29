@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreditScoreRangeScore model module.
  * @module model/CreditScoreRangeScore
- * @version 1.0.1
+ * @version 1.0.0
  */
 class CreditScoreRangeScore {
     /**

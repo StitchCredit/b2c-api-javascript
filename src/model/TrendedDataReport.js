@@ -17,7 +17,7 @@ import TrendedDataYearReport from './TrendedDataYearReport';
 /**
  * The TrendedDataReport model module.
  * @module model/TrendedDataReport
- * @version 1.0.1
+ * @version 1.0.0
  */
 class TrendedDataReport {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The MoneyReport model module.
  * @module model/MoneyReport
- * @version 1.0.1
+ * @version 1.0.0
  */
 class MoneyReport {
     /**

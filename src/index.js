@@ -94,7 +94,7 @@ import DirectControllerApi from './api/DirectControllerApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.1
+* @version 1.0.0
 */
 export {
     /**

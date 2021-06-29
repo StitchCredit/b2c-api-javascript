@@ -18,7 +18,7 @@ import InternationalPhoneReport from './InternationalPhoneReport';
 /**
  * The CreditReportProviderDisputeInformationReport model module.
  * @module model/CreditReportProviderDisputeInformationReport
- * @version 1.0.1
+ * @version 1.0.0
  */
 class CreditReportProviderDisputeInformationReport {
     /**

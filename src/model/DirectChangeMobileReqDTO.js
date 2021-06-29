@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DirectChangeMobileReqDTO model module.
  * @module model/DirectChangeMobileReqDTO
- * @version 1.0.1
+ * @version 1.0.0
  */
 class DirectChangeMobileReqDTO {
     /**

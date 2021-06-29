@@ -19,7 +19,7 @@ import LienReport from './LienReport';
 /**
  * The PublicRecordsReport model module.
  * @module model/PublicRecordsReport
- * @version 1.0.1
+ * @version 1.0.0
  */
 class PublicRecordsReport {
     /**

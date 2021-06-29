@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreditScoreHistoryProviderViewScore model module.
  * @module model/CreditScoreHistoryProviderViewScore
- * @version 1.0.1
+ * @version 1.0.0
  */
 class CreditScoreHistoryProviderViewScore {
     /**
